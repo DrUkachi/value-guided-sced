@@ -1,0 +1,52 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,booktabs,graphicx}
+\title{Which Operating Conditions Are Worth Simulating?\\
+Value-Guided Data Acquisition for Security-Constrained Redispatch under Topology Shift}
+\author{Anonymous}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper studies budgeted target-data acquisition for adapting a learned dispatch surrogate to an unseen line-outage topology. Results and conclusions are intentionally left open until the frozen protocol is executed.
+\end{abstract}
+
+\section{Introduction}
+
+The provisional contributions are:
+\begin{enumerate}
+  \item A controlled benchmark for evaluating dispatch-surrogate adaptation under an unseen line-outage topology shift.
+  \item A comparison of random, diversity, uncertainty and decision-sensitive target-data acquisition under equal SCED-label budgets.
+  \item Operational evaluation using security feasibility, repair magnitude and dispatch-cost regret rather than prediction error alone.
+  \item An analysis of whether ex-ante acquisition scores predict the realised downstream value of selected operating conditions.
+\end{enumerate}
+These statements remain provisional until the literature review confirms novelty.
+
+\section{Related Work}
+% SCED surrogates, topology shift, active learning, and decision-focused learning.
+
+\section{Problem Formulation}
+% Define operating conditions, source/target domains, oracle labels, and budgets.
+
+\section{Security-Constrained Dispatch Oracle}
+% Record the verified DC network, contingencies, objective, constraints and solver.
+
+\section{Value-Guided Target-Data Acquisition}
+% Specify random, diversity, uncertainty and decision-sensitive scores.
+
+\section{Experimental Protocol}
+% Summarise frozen splits, seeds, budgets, leakage controls and metrics.
+
+\section{Results}
+% Report label-efficiency curves with uncertainty across five seeds.
+
+\section{Discussion and Limitations}
+% Interpret null results and limitations without changing the protocol post hoc.
+
+\section{Conclusion}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
