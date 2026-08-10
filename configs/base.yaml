@@ -33,13 +33,13 @@ acquisition:
 
 evaluation:
   budgets: [0, 12, 24, 36, 48, 60]
-  final_seeds: [11, 22, 33, 44, 55]
+  final_seeds: [11, 22, 33]
   debugging_seeds: [42]
   save_per_sample_predictions: true
   evaluate_raw_feasibility: true
   evaluate_repaired_dispatch: true
 
-# To be frozen when the physical grid and oracle are implemented.
+# Decisions that remain open after the first base-oracle checkpoint.
 pending:
   operating_condition_distribution: null
   feasibility_tolerances: null

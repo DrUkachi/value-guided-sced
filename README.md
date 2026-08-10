@@ -10,10 +10,17 @@ Requires Python 3.10 or newer.
 
 ```bash
 python -m pip install -e ".[dev]"
-python scripts/check_environment.py
-python scripts/solve_verified_dispatch.py
-pytest
 ```
+
+## Smallest smoke test
+
+After setup, verify both topologies and solve the base dispatch with one command:
+
+```bash
+python scripts/smoke_test.py
+```
+
+For the complete local verification, run `python scripts/check_environment.py`, `python scripts/solve_verified_dispatch.py`, and `pytest`.
 
 ## Planned workflow
 

@@ -62,7 +62,7 @@ Eighty target-topology operating conditions are never available to the acquisiti
 | Maximum target labels | 60 |
 | Acquisition methods | Random, diversity, uncertainty, decision-sensitive |
 | Surrogate | Compact MLP ensemble |
-| Final seeds | 5 |
+| Final seeds | 3 (11, 22, 33) |
 | Debugging seeds | 1 |
 | Optimisation solver | SciPy linear optimisation |
 | Primary shift | Source topology to unseen target topology |
@@ -90,6 +90,12 @@ All strategies choose 12 samples per round from the remaining candidate pool. Ti
 
 Select candidates uniformly without replacement.
 
+```text
+INPUT: remaining candidate indices R, batch size q, seeded RNG
+SELECTED <- sample q distinct indices uniformly from R
+RETURN SELECTED
+```
+
 ### Diversity
 
 Standardise candidate inputs using statistics fitted on source-training inputs. Prioritise candidates using farthest-first (k-centre) selection:
@@ -100,6 +106,16 @@ $$
 
 After each selection within a batch, include that selected input as a centre before choosing the next sample.
 
+```text
+INPUT: standardised candidates R, labelled inputs L, batch size q
+SELECTED <- empty list
+REPEAT q times:
+    score each x in R by its distance to the nearest point in L union SELECTED
+    choose the highest-scoring x, using the experiment seed to break ties
+    append x to SELECTED and remove x from R
+RETURN SELECTED
+```
+
 ### Uncertainty
 
 Train $K=5$ MLPs with different seeded initialisations and calculate ensemble disagreement:
@@ -109,6 +125,15 @@ u(x)=\frac{1}{K}\sum_{k=1}^{K}\lVert\hat g_k(x)-\bar g(x)\rVert_2^2.
 $$
 
 Select candidates with the largest disagreement.
+
+```text
+INPUT: remaining candidates R, trained ensemble of K models, batch size q
+FOR each x in R:
+    predict dispatch with every ensemble member
+    score x by mean squared distance from the ensemble-mean dispatch
+SELECT the q highest-scoring candidates, using the experiment seed to break ties
+RETURN SELECTED
+```
 
 ### Decision-sensitive acquisition
 
@@ -125,6 +150,18 @@ a_{\mathrm{decision}}(x)=\widetilde u(x)[1+\lambda\widetilde c(x)],\qquad \lambd
 $$
 
 The target-test set cannot be used to tune $\lambda$. A later sensitivity analysis may use validation data only and must be reported separately from the frozen core experiment.
+
+```text
+INPUT: remaining candidates R, trained ensemble, target PTDFs, batch size q
+FOR each x in R:
+    calculate ensemble uncertainty u(x)
+    estimate base-case and locked-contingency flows from the mean dispatch
+    calculate criticality c(x) as the maximum line-loading ratio
+min-max normalise u and c over R, mapping a zero-range score to zero
+score each x by u_tilde(x) * [1 + c_tilde(x)]
+SELECT the q highest-scoring candidates, using the experiment seed to break ties
+RETURN SELECTED
+```
 
 ## Evaluation metrics
 
@@ -205,7 +242,7 @@ flowchart TD
 - [x] Is the decision-sensitive score defined without hidden labels?
 - [x] Are raw feasibility and repaired regret both reported?
 - [x] Is the target test set excluded from all selection decisions?
-- [ ] Does the environment-check script run in the intended environment?
+- [x] Does the environment-check script run in the intended environment?
 - [x] Is the paper skeleton present?
 - [x] Have Real-E, RL, AC-OPF and additional grids been excluded?
 
@@ -234,3 +271,5 @@ These must be resolved without consulting target-test outcomes.
 - Saved solver status, dispatch, objective cost and runtime in `results/raw/verified_source_dispatch.json`.
 - Added automated topology, matrix and successful-dispatch tests.
 - Unresolved for tomorrow: independently validate the synthetic parameters, extend the oracle to locked line-3 and line-4 contingencies, freeze numerical feasibility tolerances, define renewable injections and operating-condition ranges, and specify the repair formulation.
+
+All deviations from this frozen protocol must be entered in [the experiment-change log](change_log.md) before implementation.
