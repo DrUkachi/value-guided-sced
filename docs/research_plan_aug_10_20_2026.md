@@ -288,7 +288,7 @@ Real-E can appear in the motivation or future-work discussion: real measurement 
 - [x] Compare raw predictions with repaired decisions.
 - [x] Analyse one failure mode or counterexample.
 - [x] Run a final reproducibility check from saved configuration.
-- [ ] Freeze datasets, results, figures and commit identifier.
+- [x] Freeze datasets, results, figures and commit identifier.
 - [x] Move all uncompleted ideas to future work.
 
 ### Wednesday, 19 August — Write the full draft

@@ -1,5 +1,5 @@
 {
-  "frozen_artifacts_commit": "PENDING_FIRST_FREEZE_COMMIT",
+  "frozen_artifacts_commit": "16896e0ecb411fd07b16f4b3d430f88e5606bc7f",
   "hash_algorithm": "sha256",
   "files": {
     "configs/base.yaml": "af76749c2178f4ee38322ae137eaee339805f650bcd87b4921d95607afa86cc7",
