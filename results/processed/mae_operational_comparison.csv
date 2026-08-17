@@ -1,0 +1,16 @@
+budget,operational_metric,pearson_correlation_with_dispatch_mae
+12,mean_repair_magnitude_mw,0.9716439177268612
+12,mean_repaired_cost_regret,0.9990792530542498
+12,p95_repaired_cost_regret,0.9999580949204614
+24,mean_repair_magnitude_mw,0.9655870679129938
+24,mean_repaired_cost_regret,0.9706574217379296
+24,p95_repaired_cost_regret,0.9470435629530298
+36,mean_repair_magnitude_mw,0.9812623858323821
+36,mean_repaired_cost_regret,0.9002244106938675
+36,p95_repaired_cost_regret,0.8437556031781261
+48,mean_repair_magnitude_mw,0.9568984076921205
+48,mean_repaired_cost_regret,0.9271320976535179
+48,p95_repaired_cost_regret,0.8798003325535987
+60,mean_repair_magnitude_mw,0.9734397087783426
+60,mean_repaired_cost_regret,0.9409783425133609
+60,p95_repaired_cost_regret,0.8140015608894356

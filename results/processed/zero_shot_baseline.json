@@ -1,0 +1,92 @@
+{
+  "experiment": "source_only_zero_shot_baseline",
+  "budget": 0,
+  "seed": 42,
+  "source_train_size": 176,
+  "source_validation_size": 44,
+  "target_test_size": 80,
+  "feature_order": [
+    "gross_demand_bus_1",
+    "gross_demand_bus_2",
+    "gross_demand_bus_3",
+    "gross_demand_bus_4",
+    "gross_demand_bus_5",
+    "gross_demand_bus_6",
+    "renewable_bus_1",
+    "renewable_bus_2",
+    "renewable_bus_3",
+    "renewable_bus_4",
+    "renewable_bus_5",
+    "renewable_bus_6"
+  ],
+  "best_epochs": [
+    300,
+    300,
+    292,
+    300,
+    298
+  ],
+  "scaled_validation_losses": [
+    0.142349973320961,
+    0.12606514990329742,
+    0.16444095969200134,
+    0.1418866068124771,
+    0.14048421382904053
+  ],
+  "source_validation": {
+    "sample_count": 44.0,
+    "dispatch_mae_mw": 1.7078941336859508,
+    "dispatch_rmse_mw": 3.044349561396509,
+    "maximum_generator_error_mw": 15.972482012025097,
+    "mean_power_balance_error_mw": 0.9447463487953537,
+    "mean_generator_limit_violation_mw": 1.3588215409016067,
+    "mean_base_line_overload_mw": 0.0,
+    "mean_contingency_line_overload_mw": 0.12915404041996192,
+    "raw_feasible_percentage": 0.0,
+    "false_safe_percentage": 0.0,
+    "mean_repair_magnitude_mw": 3.7270587049064576,
+    "mean_repaired_cost_regret": 20.301686957964034,
+    "median_repaired_cost_regret": 14.597663839778534,
+    "p95_repaired_cost_regret": 63.997831957383745,
+    "worst_repaired_cost_regret": 98.90693703369834
+  },
+  "paired_source_topology": {
+    "sample_count": 80.0,
+    "dispatch_mae_mw": 1.454687871618295,
+    "dispatch_rmse_mw": 2.3433650210504546,
+    "maximum_generator_error_mw": 9.259437561035156,
+    "mean_power_balance_error_mw": 1.033921283830029,
+    "mean_generator_limit_violation_mw": 0.8445419969502836,
+    "mean_base_line_overload_mw": 0.0,
+    "mean_contingency_line_overload_mw": 0.05699055213854241,
+    "raw_feasible_percentage": 0.0,
+    "false_safe_percentage": 0.0,
+    "mean_repair_magnitude_mw": 2.435721709905215,
+    "mean_repaired_cost_regret": 21.67835149520778,
+    "median_repaired_cost_regret": 14.614266440078723,
+    "p95_repaired_cost_regret": 62.91125766002314,
+    "worst_repaired_cost_regret": 93.06231561662571
+  },
+  "target_zero_shot": {
+    "sample_count": 80.0,
+    "dispatch_mae_mw": 1.5313184260343273,
+    "dispatch_rmse_mw": 2.4188767910527535,
+    "maximum_generator_error_mw": 9.259437561035156,
+    "mean_power_balance_error_mw": 1.033921283830029,
+    "mean_generator_limit_violation_mw": 0.8445419969502836,
+    "mean_base_line_overload_mw": 0.0,
+    "mean_contingency_line_overload_mw": 0.060040482713170105,
+    "raw_feasible_percentage": 0.0,
+    "false_safe_percentage": 0.0,
+    "mean_repair_magnitude_mw": 2.451227619239778,
+    "mean_repaired_cost_regret": 22.225090802692023,
+    "median_repaired_cost_regret": 15.450416656149173,
+    "p95_repaired_cost_regret": 62.362883922092955,
+    "worst_repaired_cost_regret": 92.86621183203715
+  },
+  "paired_topology_shift": {
+    "dispatch_mae_change_mw": 0.07663055441603239,
+    "mean_repaired_cost_regret_change": 0.5467393074842413,
+    "mean_repair_magnitude_change_mw": 0.015505909334562862
+  }
+}

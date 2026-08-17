@@ -1,0 +1,61 @@
+{
+  "method": "numpy_default_rng_without_replacement",
+  "selections": {
+    "11": [
+      "target_pool-0120",
+      "target_pool-0063",
+      "target_pool-0076",
+      "target_pool-0090",
+      "target_pool-0075",
+      "target_pool-0023",
+      "target_pool-0004",
+      "target_pool-0148",
+      "target_pool-0149",
+      "target_pool-0092",
+      "target_pool-0019",
+      "target_pool-0110"
+    ],
+    "22": [
+      "target_pool-0023",
+      "target_pool-0144",
+      "target_pool-0013",
+      "target_pool-0041",
+      "target_pool-0099",
+      "target_pool-0054",
+      "target_pool-0002",
+      "target_pool-0114",
+      "target_pool-0101",
+      "target_pool-0158",
+      "target_pool-0072",
+      "target_pool-0030"
+    ],
+    "33": [
+      "target_pool-0139",
+      "target_pool-0039",
+      "target_pool-0130",
+      "target_pool-0046",
+      "target_pool-0057",
+      "target_pool-0093",
+      "target_pool-0066",
+      "target_pool-0086",
+      "target_pool-0127",
+      "target_pool-0040",
+      "target_pool-0083",
+      "target_pool-0159"
+    ],
+    "42": [
+      "target_pool-0066",
+      "target_pool-0154",
+      "target_pool-0116",
+      "target_pool-0083",
+      "target_pool-0098",
+      "target_pool-0132",
+      "target_pool-0013",
+      "target_pool-0152",
+      "target_pool-0014",
+      "target_pool-0108",
+      "target_pool-0156",
+      "target_pool-0031"
+    ]
+  }
+}

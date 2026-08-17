@@ -270,6 +270,9 @@ These must be resolved without consulting target-test outcomes.
 - Added a SciPy `linprog` DC economic-dispatch solve and a reproducible 200 MW source scenario.
 - Saved solver status, dispatch, objective cost and runtime in `results/raw/verified_source_dispatch.json`.
 - Added automated topology, matrix and successful-dispatch tests.
-- Unresolved for tomorrow: independently validate the synthetic parameters, extend the oracle to locked line-3 and line-4 contingencies, freeze numerical feasibility tolerances, define renewable injections and operating-condition ranges, and specify the repair formulation.
+- Extended the preventive SCED oracle to enforce the locked line-3 and line-4 outage states using one common generator dispatch.
+- Froze operating-condition ranges and numerical tolerances, generated the three leakage-separated datasets, and recorded the choices in the experiment-change log.
+- Independently audited the saved dispatch by reconstructing objective cost, generator bounds, nodal balance and line-limit residuals in the base case and both contingency states.
+- Unresolved for the next milestone: specify and test deterministic feasibility repair, then train and evaluate the source-only MLP ensemble.
 
 All deviations from this frozen protocol must be entered in [the experiment-change log](change_log.md) before implementation.

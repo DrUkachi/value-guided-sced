@@ -1,0 +1,21 @@
+{
+  "frozen": true,
+  "configuration": "configs\\base.yaml",
+  "seed": 42,
+  "counts": {
+    "source": 220,
+    "target_pool": 160,
+    "target_test": 80
+  },
+  "rejected_infeasible_draws": {
+    "source": 0,
+    "target_pool": 0,
+    "target_test": 0
+  },
+  "sha256": {
+    "source.jsonl": "53be3c874b5f453b0825d663d3421ebfc1a61f131e91aaaea855d4184c8bad82",
+    "target_pool_features.jsonl": "106a15da36fbae95c00ce5e6332272ea27dd59aa719cef232a58225d7f328282",
+    "target_pool_hidden_labels.jsonl": "c5bf3b86cfbd3563be6468a4ab6e9a29cf219e26181eb8f4b77959a4f21e7529",
+    "target_test.jsonl": "c76af37be839ffb825ddd6d6cf48d5f190e18f1babe87d0be7dca60dfdc64230"
+  }
+}

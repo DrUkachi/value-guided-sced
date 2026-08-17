@@ -1,0 +1,248 @@
+{
+  "seed": 42,
+  "candidate_oracle_labels_accessed": false,
+  "score_ranges": {
+    "uncertainty": [
+      0.6464815263257663,
+      42.68978146828204
+    ],
+    "criticality": [
+      0.9249941404357213,
+      1.0414080232321075
+    ],
+    "decision_sensitive": [
+      0.0,
+      1.2003405115455237
+    ]
+  },
+  "top_ten": {
+    "random": [
+      {
+        "scenario_id": "target_pool-0155",
+        "net_demand_total_mw": 196.6555099872411
+      },
+      {
+        "scenario_id": "target_pool-0115",
+        "net_demand_total_mw": 323.4151674036514
+      },
+      {
+        "scenario_id": "target_pool-0012",
+        "net_demand_total_mw": 272.3131453453311
+      },
+      {
+        "scenario_id": "target_pool-0097",
+        "net_demand_total_mw": 180.52209999556607
+      },
+      {
+        "scenario_id": "target_pool-0065",
+        "net_demand_total_mw": 145.96642045051996
+      },
+      {
+        "scenario_id": "target_pool-0064",
+        "net_demand_total_mw": 274.7604594080421
+      },
+      {
+        "scenario_id": "target_pool-0107",
+        "net_demand_total_mw": 218.37009306555433
+      },
+      {
+        "scenario_id": "target_pool-0015",
+        "net_demand_total_mw": 145.0803921496199
+      },
+      {
+        "scenario_id": "target_pool-0032",
+        "net_demand_total_mw": 156.87751294516008
+      },
+      {
+        "scenario_id": "target_pool-0131",
+        "net_demand_total_mw": 231.08999651523794
+      }
+    ],
+    "diversity": [
+      {
+        "scenario_id": "target_pool-0080",
+        "net_demand_total_mw": 323.23467636199
+      },
+      {
+        "scenario_id": "target_pool-0019",
+        "net_demand_total_mw": 330.521203121565
+      },
+      {
+        "scenario_id": "target_pool-0049",
+        "net_demand_total_mw": 292.02050106661386
+      },
+      {
+        "scenario_id": "target_pool-0051",
+        "net_demand_total_mw": 296.8160088443021
+      },
+      {
+        "scenario_id": "target_pool-0010",
+        "net_demand_total_mw": 311.2476647591237
+      },
+      {
+        "scenario_id": "target_pool-0006",
+        "net_demand_total_mw": 259.1655451191869
+      },
+      {
+        "scenario_id": "target_pool-0047",
+        "net_demand_total_mw": 312.56944328613986
+      },
+      {
+        "scenario_id": "target_pool-0072",
+        "net_demand_total_mw": 262.2719088407708
+      },
+      {
+        "scenario_id": "target_pool-0063",
+        "net_demand_total_mw": 274.4773139878928
+      },
+      {
+        "scenario_id": "target_pool-0064",
+        "net_demand_total_mw": 274.7604594080421
+      }
+    ],
+    "uncertainty": [
+      {
+        "scenario_id": "target_pool-0062",
+        "net_demand_total_mw": 264.5637690168964,
+        "uncertainty": 42.68978146828204,
+        "criticality": 0.9442930683431975,
+        "decision_sensitive_score": 1.1657785776394989
+      },
+      {
+        "scenario_id": "target_pool-0006",
+        "net_demand_total_mw": 259.1655451191869,
+        "uncertainty": 32.22834135814808,
+        "criticality": 0.9405754871637074,
+        "decision_sensitive_score": 0.8517151384149042
+      },
+      {
+        "scenario_id": "target_pool-0072",
+        "net_demand_total_mw": 262.2719088407708,
+        "uncertainty": 28.238800204368562,
+        "criticality": 0.9561068683648547,
+        "decision_sensitive_score": 0.8316814051607896
+      },
+      {
+        "scenario_id": "target_pool-0019",
+        "net_demand_total_mw": 330.521203121565,
+        "uncertainty": 27.080380355580708,
+        "criticality": 1.0308318140948396,
+        "decision_sensitive_score": 1.2003405115455237
+      },
+      {
+        "scenario_id": "target_pool-0063",
+        "net_demand_total_mw": 274.4773139878928,
+        "uncertainty": 23.29909388876984,
+        "criticality": 0.9761641462821986,
+        "decision_sensitive_score": 0.7756199767509495
+      },
+      {
+        "scenario_id": "target_pool-0080",
+        "net_demand_total_mw": 323.23467636199,
+        "uncertainty": 21.526991504666547,
+        "criticality": 0.9289750378282388,
+        "decision_sensitive_score": 0.5136262236380018
+      },
+      {
+        "scenario_id": "target_pool-0088",
+        "net_demand_total_mw": 299.25943973809035,
+        "uncertainty": 19.66823062668966,
+        "criticality": 0.9293241843441857,
+        "decision_sensitive_score": 0.4692606886663
+      },
+      {
+        "scenario_id": "target_pool-0033",
+        "net_demand_total_mw": 350.60319053842886,
+        "uncertainty": 18.61711521408288,
+        "criticality": 0.9536682829203371,
+        "decision_sensitive_score": 0.5327131171527371
+      },
+      {
+        "scenario_id": "target_pool-0038",
+        "net_demand_total_mw": 346.74358327889837,
+        "uncertainty": 18.088714588058647,
+        "criticality": 1.0284913196345715,
+        "decision_sensitive_score": 0.783695928126965
+      },
+      {
+        "scenario_id": "target_pool-0049",
+        "net_demand_total_mw": 292.02050106661386,
+        "uncertainty": 17.73194831123243,
+        "criticality": 1.022321492895967,
+        "decision_sensitive_score": 0.7461284373552337
+      }
+    ],
+    "decision_sensitive": [
+      {
+        "scenario_id": "target_pool-0019",
+        "net_demand_total_mw": 330.521203121565,
+        "uncertainty": 27.080380355580708,
+        "criticality": 1.0308318140948396,
+        "decision_sensitive_score": 1.2003405115455237
+      },
+      {
+        "scenario_id": "target_pool-0062",
+        "net_demand_total_mw": 264.5637690168964,
+        "uncertainty": 42.68978146828204,
+        "criticality": 0.9442930683431975,
+        "decision_sensitive_score": 1.1657785776394989
+      },
+      {
+        "scenario_id": "target_pool-0006",
+        "net_demand_total_mw": 259.1655451191869,
+        "uncertainty": 32.22834135814808,
+        "criticality": 0.9405754871637074,
+        "decision_sensitive_score": 0.8517151384149042
+      },
+      {
+        "scenario_id": "target_pool-0072",
+        "net_demand_total_mw": 262.2719088407708,
+        "uncertainty": 28.238800204368562,
+        "criticality": 0.9561068683648547,
+        "decision_sensitive_score": 0.8316814051607896
+      },
+      {
+        "scenario_id": "target_pool-0038",
+        "net_demand_total_mw": 346.74358327889837,
+        "uncertainty": 18.088714588058647,
+        "criticality": 1.0284913196345715,
+        "decision_sensitive_score": 0.783695928126965
+      },
+      {
+        "scenario_id": "target_pool-0063",
+        "net_demand_total_mw": 274.4773139878928,
+        "uncertainty": 23.29909388876984,
+        "criticality": 0.9761641462821986,
+        "decision_sensitive_score": 0.7756199767509495
+      },
+      {
+        "scenario_id": "target_pool-0049",
+        "net_demand_total_mw": 292.02050106661386,
+        "uncertainty": 17.73194831123243,
+        "criticality": 1.022321492895967,
+        "decision_sensitive_score": 0.7461284373552337
+      },
+      {
+        "scenario_id": "target_pool-0051",
+        "net_demand_total_mw": 296.8160088443021,
+        "uncertainty": 16.645486208511407,
+        "criticality": 1.0274284879572768,
+        "decision_sensitive_score": 0.7153761117701496
+      },
+      {
+        "scenario_id": "target_pool-0010",
+        "net_demand_total_mw": 311.2476647591237,
+        "uncertainty": 16.74938777072195,
+        "criticality": 1.0200045044743422,
+        "decision_sensitive_score": 0.6955966563967784
+      },
+      {
+        "scenario_id": "target_pool-0033",
+        "net_demand_total_mw": 350.60319053842886,
+        "uncertainty": 18.61711521408288,
+        "criticality": 0.9536682829203371,
+        "decision_sensitive_score": 0.5327131171527371
+      }
+    ]
+  }
+}

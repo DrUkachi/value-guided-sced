@@ -17,6 +17,18 @@ data:
   initial_target_labels: 12
   acquisition_batch_size: 12
   acquisition_rounds: 4
+  generation_seed: 42
+  total_gross_demand_mw: [140.0, 370.0]
+  demand_profile: [0.0, 0.20, 0.175, 0.225, 0.25, 0.15]
+  demand_concentration: 80.0
+  renewable_buses: [4, 5]
+  renewable_fraction_of_local_demand: [0.0, 0.35]
+  maximum_sampling_attempts: 100000
+
+oracle:
+  balance_tolerance_mw: 1.0e-7
+  limit_tolerance_mw: 1.0e-7
+  binding_tolerance_mw: 1.0e-5
 
 surrogate:
   model: mlp
@@ -26,6 +38,7 @@ surrogate:
   learning_rate: 0.001
   max_epochs: 300
   early_stopping_patience: 25
+  source_validation_fraction: 0.2
 
 acquisition:
   methods: [random, diversity, uncertainty, decision_sensitive]

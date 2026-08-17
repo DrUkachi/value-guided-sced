@@ -60,16 +60,16 @@ def _generators() -> tuple[Generator, ...]:
 def _lines() -> tuple[Line, ...]:
     # Parameters are a documented synthetic benchmark, not a named test system.
     return (
-        Line(1, 1, 2, 0.10, 100.0),
-        Line(2, 1, 4, 0.12, 100.0),
-        Line(3, 1, 5, 0.15, 100.0),
-        Line(4, 2, 3, 0.10, 100.0),
-        Line(5, 2, 4, 0.08, 100.0),
-        Line(6, 2, 5, 0.11, 100.0),
-        Line(7, 3, 5, 0.09, 100.0),
-        Line(8, 3, 6, 0.13, 100.0),
-        Line(9, 4, 5, 0.10, 100.0),
-        Line(10, 5, 6, 0.12, 100.0),
+        Line(1, 1, 2, 0.10, 75.0),
+        Line(2, 1, 4, 0.12, 75.0),
+        Line(3, 1, 5, 0.15, 75.0),
+        Line(4, 2, 3, 0.10, 75.0),
+        Line(5, 2, 4, 0.08, 75.0),
+        Line(6, 2, 5, 0.11, 75.0),
+        Line(7, 3, 5, 0.09, 75.0),
+        Line(8, 3, 6, 0.13, 75.0),
+        Line(9, 4, 5, 0.10, 75.0),
+        Line(10, 5, 6, 0.12, 75.0),
     )
 
 
@@ -89,6 +89,22 @@ def build_target_grid() -> Grid:
         source.generators,
         source.reference_bus,
     )
+
+
+def without_line(grid: Grid, line_number: int) -> Grid:
+    """Return a grid with one named line removed for an N-1 contingency."""
+
+    if line_number not in {line.number for line in grid.lines}:
+        raise ValueError(f"line {line_number} is not in the grid")
+    outaged = Grid(
+        grid.buses,
+        tuple(line for line in grid.lines if line.number != line_number),
+        grid.generators,
+        grid.reference_bus,
+    )
+    if not is_connected(outaged):
+        raise ValueError(f"outage of line {line_number} islands the grid")
+    return outaged
 
 
 def is_connected(grid: Grid) -> bool:
