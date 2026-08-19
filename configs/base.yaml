@@ -1,0 +1,59 @@
+project:
+  seed: 42
+  output_dir: results/raw
+
+grid:
+  num_buses: 6
+  num_lines: 10
+  num_generators: 4
+  target_outage_line: 8
+  contingency_lines: [3, 4]
+  parameter_set: synthetic_six_bus_v1
+
+data:
+  source_size: 220
+  target_candidate_size: 160
+  target_test_size: 80
+  initial_target_labels: 12
+  acquisition_batch_size: 12
+  acquisition_rounds: 4
+  generation_seed: 42
+  total_gross_demand_mw: [140.0, 370.0]
+  demand_profile: [0.0, 0.20, 0.175, 0.225, 0.25, 0.15]
+  demand_concentration: 80.0
+  renewable_buses: [4, 5]
+  renewable_fraction_of_local_demand: [0.0, 0.35]
+  maximum_sampling_attempts: 100000
+
+oracle:
+  balance_tolerance_mw: 1.0e-7
+  limit_tolerance_mw: 1.0e-7
+  binding_tolerance_mw: 1.0e-5
+
+surrogate:
+  model: mlp
+  ensemble_size: 5
+  hidden_sizes: [128, 128]
+  activation: relu
+  learning_rate: 0.001
+  max_epochs: 300
+  early_stopping_patience: 25
+  source_validation_fraction: 0.2
+
+acquisition:
+  methods: [random, diversity, uncertainty, decision_sensitive]
+  decision_lambda: 1.0
+
+evaluation:
+  budgets: [0, 12, 24, 36, 48, 60]
+  final_seeds: [11, 22, 33]
+  debugging_seeds: [42]
+  save_per_sample_predictions: true
+  evaluate_raw_feasibility: true
+  evaluate_repaired_dispatch: true
+
+# Decisions that remain open after the first base-oracle checkpoint.
+pending:
+  operating_condition_distribution: null
+  feasibility_tolerances: null
+  repair_formulation: null
