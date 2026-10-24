@@ -1,12 +1,11 @@
-# Research and Interview Plan: 10–20 August 2026
+# Research Plan: 10–20 August 2026
 
 ## Project
 
 **Working title:** *Which Operating Conditions Are Worth Simulating? Value-Guided Data Acquisition for Security-Constrained Redispatch under Topology Shift*
 
-**Interview:** 25 August 2026  
 **Experiment freeze:** 18 August 2026  
-**Complete paper and interview package:** 20 August 2026
+**Complete paper:** 20 August 2026
 
 ## 1. What this project demonstrates
 
@@ -302,17 +301,13 @@ Real-E can appear in the motivation or future-work discussion: real measurement 
 - [x] Add references and verify every factual claim.
 - [x] Clean the repository and reproduction instructions.
 
-### Thursday, 20 August — Revise and build the interview package
+### Thursday, 20 August — Finalize and archive the paper
 
-**Outcome:** a shareable draft and a rehearsable interview narrative.
+**Outcome:** a complete paper draft and archived experiment artifacts.
 
 - [x] Revise for one clear contribution and remove unsupported claims.
 - [x] Check that every figure is readable and every metric is defined.
 - [x] Export the paper to PDF and archive the exact experiment configuration.
-- [x] Prepare five interview slides: problem, gap, method, result, PhD extension.
-- [x] Prepare three-minute and seven-minute spoken versions.
-- [x] Prepare answers on novelty, compute cost, limitations, negative results and group fit.
-- [ ] Rehearse twice and record questions that still need concise answers. (Live delivery remains for the candidate; the two-pass timing and question sheet is prepared.)
 
 ## 9. Hypotheses
 
@@ -337,19 +332,7 @@ H4 is deliberately testable and may be rejected. A negative result must be repor
 10. Connection to the proposed PhD
 11. Conclusion
 
-## 11. Interview narrative
-
-Use the experiment as a concrete, modest demonstration of the larger proposal:
-
-1. Grid simulation labels can be costly at realistic scale.
-2. Structural change makes historical or source-grid data less reliable.
-3. Not every additional simulated operating condition has equal downstream value.
-4. The experiment tests which cases should be labelled for SCED transfer.
-5. A PhD can extend this foundation to richer simulators, learned generators, larger grids, state estimation, protection and principled value-of-information methods.
-
-Do not present the 6-bus experiment as the PhD endpoint. Present it as evidence that the research question has been translated into a falsifiable computational study.
-
-## 12. Definition of success by 20 August
+## 11. Definition of success by 20 August
 
 The sprint succeeds if it produces:
 
@@ -359,12 +342,11 @@ The sprint succeeds if it produces:
 - three-seed learning curves for operational regret and feasibility;
 - at least one honest ablation or failure analysis;
 - a complete draft paper;
-- a clean repository or reproducibility bundle; and
-- a five-slide interview presentation with rehearsed answers.
+- a clean repository or reproducibility bundle.
 
 A statistically decisive positive result is not required. A well-controlled negative result, clear limitations and a credible next-step research programme are academically defensible.
 
-## 13. Emergency fallback
+## 12. Emergency fallback
 
 If implementation slips by more than one day:
 

@@ -55,8 +55,6 @@ python scripts/freeze_experiments.py --commit 16896e0ecb411fd07b16f4b3d430f88e56
 
 Results are written under `results/processed/` and `results/figures/`. To build the manuscript, enter `paper/` and run `pdflatex main`, `bibtex main`, then `pdflatex main` twice.
 
-The interview package is in `interview/`: `slides.pdf` contains the five-slide deck, while `interview_package.md` contains the three- and seven-minute narratives, likely questions, and the two-pass live-rehearsal sheet.
-
 ## Experimental workflow
 
 1. Generate source, target-candidate and untouched target-test operating conditions.
