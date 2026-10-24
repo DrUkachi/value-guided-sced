@@ -2,7 +2,7 @@
 
 Research code for studying which target-topology operating conditions should receive expensive security-constrained economic dispatch (SCED) labels when adapting a learned dispatch surrogate after an unseen line outage.
 
-The scientific contract is in [`docs/protocol.md`](docs/protocol.md), and all frozen machine-readable choices are in [`configs/base.yaml`](configs/base.yaml). The repository includes a synthetic six-bus DC network and a first linear economic-dispatch solver; no model training is included yet.
+The scientific contract is in [`docs/protocol.md`](docs/protocol.md), and all frozen machine-readable choices are in [`configs/base.yaml`](configs/base.yaml). The repository contains the complete frozen experiment: the DC-SCED oracle, MLP ensemble, four acquisition strategies, deterministic repair, three-seed outputs, figures, and manuscript.
 
 ## Setup
 
@@ -26,7 +26,24 @@ Run `python scripts/run_experiment.py` to reproduce the budget-zero source-only
 MLP baseline, paired topology-shift diagnostic, feasibility repair, and initial
 results under `results/processed/`.
 
-## Planned workflow
+## Reproduce the frozen study
+
+The committed datasets and initial selections are immutable inputs. Re-run the final seeds and rebuild aggregate outputs with:
+
+```bash
+python scripts/run_experiment.py --seed 11
+python scripts/run_experiment.py --seed 22
+python scripts/run_experiment.py --seed 33
+python scripts/aggregate_results.py
+python scripts/analyze_results.py
+python scripts/freeze_experiments.py
+```
+
+Results are written under `results/processed/` and `results/figures/`. To build the manuscript, enter `paper/` and run `pdflatex main`, `bibtex main`, then `pdflatex main` twice.
+
+The interview package is in `interview/`: `slides.pdf` contains the five-slide deck, while `interview_package.md` contains the three- and seven-minute narratives, likely questions, and the two-pass live-rehearsal sheet.
+
+## Experimental workflow
 
 1. Generate source, target-candidate and untouched target-test operating conditions.
 2. Solve the source and selected target conditions with the SCED oracle.

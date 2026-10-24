@@ -295,24 +295,24 @@ Real-E can appear in the motivation or future-work discussion: real measurement 
 
 **Outcome:** a complete paper draft can be read from beginning to end.
 
-- [ ] Finalise Methods and Experimental Setup first.
-- [ ] Write Results directly from frozen tables and figures.
-- [ ] Write Introduction, Related Work, Discussion and Limitations.
-- [ ] Complete the abstract last.
-- [ ] Add references and verify every factual claim.
-- [ ] Clean the repository and reproduction instructions.
+- [x] Finalise Methods and Experimental Setup first.
+- [x] Write Results directly from frozen tables and figures.
+- [x] Write Introduction, Related Work, Discussion and Limitations.
+- [x] Complete the abstract last.
+- [x] Add references and verify every factual claim.
+- [x] Clean the repository and reproduction instructions.
 
 ### Thursday, 20 August — Revise and build the interview package
 
 **Outcome:** a shareable draft and a rehearsable interview narrative.
 
-- [ ] Revise for one clear contribution and remove unsupported claims.
-- [ ] Check that every figure is readable and every metric is defined.
-- [ ] Export the paper to PDF and archive the exact experiment configuration.
-- [ ] Prepare five interview slides: problem, gap, method, result, PhD extension.
-- [ ] Prepare three-minute and seven-minute spoken versions.
-- [ ] Prepare answers on novelty, compute cost, limitations, negative results and group fit.
-- [ ] Rehearse twice and record questions that still need concise answers.
+- [x] Revise for one clear contribution and remove unsupported claims.
+- [x] Check that every figure is readable and every metric is defined.
+- [x] Export the paper to PDF and archive the exact experiment configuration.
+- [x] Prepare five interview slides: problem, gap, method, result, PhD extension.
+- [x] Prepare three-minute and seven-minute spoken versions.
+- [x] Prepare answers on novelty, compute cost, limitations, negative results and group fit.
+- [ ] Rehearse twice and record questions that still need concise answers. (Live delivery remains for the candidate; the two-pass timing and question sheet is prepared.)
 
 ## 9. Hypotheses
 
