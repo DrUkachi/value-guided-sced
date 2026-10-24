@@ -1,8 +1,22 @@
 # Value-Guided SCED
 
+**[Read the paper (PDF)](paper/main.pdf)** · [LaTeX source](paper/main.tex)
+
 Research code for studying which target-topology operating conditions should receive expensive security-constrained economic dispatch (SCED) labels when adapting a learned dispatch surrogate after an unseen line outage.
 
 The scientific contract is in [`docs/protocol.md`](docs/protocol.md), and all frozen machine-readable choices are in [`configs/base.yaml`](configs/base.yaml). The repository contains the complete frozen experiment: the DC-SCED oracle, MLP ensemble, four acquisition strategies, deterministic repair, three-seed outputs, figures, and manuscript.
+
+## Findings
+
+**Research question:** Which target-topology operating conditions should receive scarce SCED labels to adapt a dispatch surrogate after a line outage?
+
+**Preregistered hypothesis (H5):** Decision-sensitive acquisition would reduce security violations and repaired-cost regret per target-oracle call.
+
+**Result:** H5 was rejected in this experiment. At 60 target labels, uncertainty sampling had the lowest mean dispatch MAE (1.387 MW) and repaired-cost regret (21.06); raw security feasibility was 0% for every method under the frozen tolerances. Results average three seeds and are descriptive.
+
+![Mean repaired-cost regret by target-label budget for the four acquisition methods; uncertainty sampling is lowest at 60 labels.](results/figures/regret_vs_labels.png)
+
+The initial protocol, including H5, was committed on **10 August 2026**, before the main experiment runs: [protocol at the pre-experiment commit `d5c1015`](https://github.com/DrUkachi/value-guided-sced/blob/d5c1015c17dab13544de0a2be5729ef3e44ef131/docs/protocol.md). Later implementation decisions are recorded in the [experiment-change log](docs/change_log.md).
 
 ## Setup
 
@@ -36,7 +50,7 @@ python scripts/run_experiment.py --seed 22
 python scripts/run_experiment.py --seed 33
 python scripts/aggregate_results.py
 python scripts/analyze_results.py
-python scripts/freeze_experiments.py
+python scripts/freeze_experiments.py --commit 16896e0ecb411fd07b16f4b3d430f88e5606bc7f
 ```
 
 Results are written under `results/processed/` and `results/figures/`. To build the manuscript, enter `paper/` and run `pdflatex main`, `bibtex main`, then `pdflatex main` twice.
