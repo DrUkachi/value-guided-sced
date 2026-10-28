@@ -5,11 +5,11 @@
 \emergencystretch=1em
 \graphicspath{{../results/figures/}}
 \title{Which Operating Conditions Are Worth Simulating?\\Value-Guided Data Acquisition for Security-Constrained Redispatch under Topology Shift}
-\author{Ukachi Osisiogu\\Independent Researcher}\date{}
+\author{Ukachi Osisiogu\\Independent Researcher\\\href{mailto:ukachi.osi@gmail.com}{\texttt{ukachi.osi@gmail.com}}}\date{}
 \begin{document}\maketitle
 
 \begin{abstract}
-Simulation labels are not equally useful when predictions feed a constrained decision. We study budgeted adaptation of a dispatch surrogate after an unseen transmission-line outage. A five-member multilayer-perceptron ensemble is trained on 220 secure-dispatch solutions from a synthetic six-bus source grid, then adapted using up to 60 labelled cases from a 160-case target pool after line 8 is removed. Random, diversity, uncertainty, and uncertainty-times-predicted-criticality acquisition are compared on the same held-out 80-case target test set across three seeds. At 60 target labels, uncertainty obtains the lowest mean dispatch error (1.387 MW) and repaired-cost regret (21.06 cost units), versus 1.425 MW and 22.42 for the decision-sensitive heuristic. All raw predictions fail an exact $10^{-7}$ MW feasibility test and require a common deterministic repair. A matched-case diagnostic shows a modest topology penalty, and rankings differ across metrics and seeds. The experiment supports decision-oriented evaluation and targeted labelling, but not the claim that the proposed operational weighting improves on uncertainty alone.
+Simulation labels are not equally useful when predictions feed a constrained decision. We study budgeted adaptation of a dispatch surrogate after an unseen transmission-line outage. A five-member multilayer-perceptron ensemble is trained on 220 secure-dispatch solutions from a synthetic six-bus source grid, then adapted using up to 60 labelled cases from a 160-case target pool after line 8 is removed. Random, diversity, uncertainty, and uncertainty-times-predicted-criticality acquisition are compared on the same held-out 80-case target test set across three seeds. At 60 target labels, uncertainty obtains the lowest mean dispatch error (1.387 MW) and repaired-cost regret (21.06 cost units), versus 1.425 MW and 22.42 for the decision-sensitive heuristic. All raw predictions fail an exact $10^{-7}$ MW feasibility test and require a common deterministic repair. A matched-case diagnostic shows a modest topology penalty, and rankings differ across metrics and seeds. The experiment supports decision-oriented evaluation and targeted labelling, but not the claim that the proposed operational weighting improves on uncertainty alone. Code, configurations, and results are available at \url{https://github.com/DrUkachi/value-guided-sced}.
 \end{abstract}
 
 \section{Introduction}
@@ -67,9 +67,13 @@ Random&1.582&23.23\\Diversity&1.504&23.24\\Uncertainty&\textbf{1.387}&\textbf{21
 \end{table}
 
 \begin{figure}[t]\centering
-\includegraphics[width=.49\linewidth]{regret_vs_labels.png}
-\includegraphics[width=.49\linewidth]{feasibility_vs_labels.png}
-\caption{Repaired regret and exact raw feasibility versus target labels; bands are 95\% $t$ intervals.}
+\includegraphics[width=.75\linewidth]{regret_vs_labels.png}
+\caption{Mean repaired-cost regret versus target labels across three seeds; bands are 95\% $t$ intervals.}\label{fig:regret}
+\end{figure}
+
+\begin{figure}[t]\centering
+\includegraphics[width=\linewidth]{feasibility_vs_labels.png}
+\caption{Left: exact raw security feasibility, which is 0\% for every method and budget. Right: mean repair magnitude (distance from the raw prediction to a secure dispatch) versus target labels.}\label{fig:feasibility}
 \end{figure}
 
 Exact raw feasibility is 0\% for every method and budget under the precommitted tolerance. This tests whether unconstrained regression directly returns a secure dispatch; it does not imply equal prediction quality. Continuous violations and repair magnitude distinguish models, while repair enables cost comparison. MAE, repair, and regret rankings differ in several seed--budget cells.
